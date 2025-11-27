@@ -1,0 +1,413 @@
+/* ==================== ESTILOS BASE ==================== */
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f4f0e8;  /* 🌾 beige general */
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ==================== NAVBAR ==================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 18px 60px;
+    background: #c0aea7;  /* 🟤 marrón suave */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand {
+    font-size: 3.0rem;
+    font-weight: 900;
+    color: #4c804c; /* blanco cálido */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fbfff9; /* blanco cálido */
+    font-size: 2.5rem;
+    transition: 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #4c804c; /* beige suave */
+}
+
+/* ==================== DROPDOWN ==================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #4c804c;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dropbtn:hover {
+    color: #3be446;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    min-width: 340px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 12px 0;
+    z-index: 200;
+    white-space: normal;
+}
+
+.dropdown-content a {
+    color: #444;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+    line-height: 1.3;
+}
+
+.dropdown-content a:hover {
+    background: #84c2a5;
+    color: #1b5e20;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==================== HERO ==================== */
+
+.hero-section {
+    margin-top: 130px;
+    padding: 60px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    color: #1b5e20;
+    margin-bottom: 15px;
+}
+
+.hero-text h3 {
+    font-size: 1.3rem;
+    color: #388e3c;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.btn-hero:hover {
+    background: #1b5e20;
+}
+
+/* Imagen responsiva */
+.hero-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* ---- Pantallas medianas ---- */
+@media screen and (max-width: 1200px) {
+    .hero-img {
+        max-width: 350px; 
+    }
+}
+
+/* ---- Pantallas pequeñas ---- */
+@media screen and (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-img {
+        max-width: 320px; 
+    }
+}
+
+/* ---- Pantallas muy pequeñas ---- */
+@media screen and (max-width: 600px) {
+    .hero-img {
+        max-width: 280px; 
+    }
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    margin-top: 50px;
+}
+
+/* ======== ICONOS DEL FOOTER ======== */
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    color: #555;
+}
+
+.footer p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/* Fondo general */
+body {
+    background-color: #f2ecdf;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR (igual al principal) */
+.navbar {
+    background-color: #b7a39a;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-left: 10px;
+}
+
+/* Menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2e7d32;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #2e7d32;
+}
+
+/* Contenido de sesión */
+.contenido-sesion {
+    padding: 40px;
+    text-align: center;
+}
+
+.titulo-sesion {
+    font-size: 36px;
+    color: #355e3b;
+    margin-bottom: 10px;
+}
+
+.descripcion-sesion {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Imágenes */
+.galeria-sesion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.img-sesion {
+    width: 85%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.footer-icons img {
+    width: 45px;
+    margin: 0 12px;
+    transition: 0.2s;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.15);
+}
+
+/* Importante: evitar que el menú desaparezca */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* VIDEO */
+.video-contenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.video-sesion {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.nota-video {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+/* Corrección de alineación para el texto de sesión */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo span {
+    margin-left: 12px;
+    line-height: 1; 
+    padding-top: 3px; /* Ajuste fino hacia arriba */
+}
